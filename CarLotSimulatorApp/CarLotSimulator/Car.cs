@@ -5,14 +5,18 @@ namespace CarLotSimulator
 {
     public class Car
     {
-    
-   
-            //Create a seperate class file called Car
-            //Car shall have the following properties: Year, Make, Model, EngineNoise, HonkNoise, IsDriveable
-            //Car shall have the following methods: MakeEngineNoise(), MakeHonkNoise()
-            //The methods should take one string parameter: the respective noise property
 
-            public int Year { get; set; }
+        public Car()
+        {
+            CarLot._numberOfCars++;
+        }
+
+        //Create a seperate class file called Car
+        //Car shall have the following properties: Year, Make, Model, EngineNoise, HonkNoise, IsDriveable
+        //Car shall have the following methods: MakeEngineNoise(), MakeHonkNoise()
+        //The methods should take one string parameter: the respective noise property
+
+        public int Year { get; set; }
         public string Make { get; set; }
         public string Model { get; set; }
         public string EngineNoise { get; set; }
@@ -29,10 +33,6 @@ namespace CarLotSimulator
         {
             Console.WriteLine($"My honk sounds like {HonkNoise}");
         }
-        public Car()
-        {
-            
-        }
 
         public Car(int year, string make, string model, string engineNoise, string honkNoise, bool isDrivable)
         {
@@ -42,8 +42,13 @@ namespace CarLotSimulator
             EngineNoise = engineNoise;
             HonkNoise = honkNoise;
             IsDrivable = isDrivable;
+            CarLot._numberOfCars++;
+
+            Console.WriteLine($"Current number of cars in our car Lot is : {CarLot._numberOfCars}");
 
         }
+
+       
 
         
     }

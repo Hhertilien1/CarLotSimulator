@@ -5,14 +5,9 @@ namespace CarLotSimulator
 {
 	public class CarLot
 	{
-		public CarLot()
-		{
-            var listOfCars = new List<string>();
-			foreach(string car in Car)
-			{
+		public static int _numberOfCars;
 
-			}
-        }
+		public List<Car> Cars = new List<Car>();
 	}
 }
 
